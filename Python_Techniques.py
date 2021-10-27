@@ -43,7 +43,8 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 34) List creation problem with range, how range creates for example (0,5) or (1,6)
 35) Creating dict from a sentence, and check how many letters does it have. How many A, how many B etc
 36) Dictionary key sorting
-37) Implement sound/music to your game
+37) Implement sound/music to your game - with playsound
+38) Implement sound/music to your game - with pygame - mixer (You can pause the music, resume, volume etc)
 
 #################################################################################
 
@@ -820,6 +821,45 @@ end_credit_music = multiprocessing.Process(target=playsound, args=("Soundtracks/
 end_credit_music.start()    #Ez kezdi el
 time.sleep(10)
 end_credit_music.kill()     #Ez öli meg a zenét
+
+"-------------------------------------------------------------"
+#38) Implement sound/music to your game - with pygame - mixer (You can pause the music, resume, volume etc)
+
+from pygame import mixer
+  
+# Starting the mixer
+mixer.init()
+  
+# Loading the song
+mixer.music.load("Soundtracks/Music/Rolling_after_credit_music.mp3")
+  
+# Setting the volume
+mixer.music.set_volume(0.7)
+  
+# Start playing the song
+mixer.music.play()
+  
+# infinite loop
+while True:
+      
+    print("Press 'p' to pause, 'r' to resume")
+    print("Press 'e' to exit the program")
+    query = input("  ")
+      
+    if query == 'p':
+  
+        # Pausing the music
+        mixer.music.pause()     
+    elif query == 'r':
+  
+        # Resuming the music
+        mixer.music.unpause()
+    elif query == 'e':
+  
+        # Stop the mixer
+        mixer.music.stop()
+        break
+        
 #################################################################################
 
                                 #DATA STRUCTURE CHANGES
