@@ -48,6 +48,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 34) List creation problem with range, how range creates for example (0,5) or (1,6)
 35) Creating dict from a sentence, and check how many letters does it have. How many A, how many B etc
 36) Dictionary key sorting
+37) Implement sound/music to your game
 
 #################################################################################
 
