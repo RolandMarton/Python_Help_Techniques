@@ -45,6 +45,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 36) Dictionary key sorting
 37) Implement sound/music to your game - with playsound
 38) Implement sound/music to your game - with pygame - mixer (You can pause the music, resume, volume etc)
+39) Change a letter in a string - 2 ways
 
 #################################################################################
 
@@ -861,6 +862,32 @@ while True:
         break
         
 #################################################################################
+
+#39) Change a letter in a string - 2 ways
+
+old_string = "aba"
+
+string_list = list(old_string)
+string_list[2] = "c"
+#Replace 3rd element
+
+new_string = "".join(string_list)
+
+print(new_string)
+
+"""
+>>> abc
+"""
+
+a_string = "aba"
+a_string = a_string.replace("a", "b")
+#Replace in a_string
+
+print(a_string)
+
+>>> bbb
+"""
+
 
                                 #DATA STRUCTURE CHANGES
 
