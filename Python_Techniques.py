@@ -40,6 +40,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 31) How to make a list of keys from a dictionary
 32) Arguments in functions (Positional,Default, Variable length etc)
 33) Difference between list() and split() (str --> list) & list --> str with join
+34) List creation problem with range, how range creates for example (0,5) or (1,6)
 
 #################################################################################
 
@@ -715,6 +716,34 @@ print("".join(var))		#the string again but without space
 ['Peter', 'Jackson']
 PeterJackson
 """
+
+"-------------------------------------------------------------"
+#34) List creation problem with range, how range creates for example (0,5) or (1,6)
+
+print(range(1,8))
+print(range(0,8))
+print(range(len("jóska")))
+
+new_list = []
+for index in range(8):
+	new_list.append(index)
+print(new_list)
+
+new_list = []
+for index in range(1,8):
+	new_list.append(index)
+print(new_list)
+
+"""
+>>> range(1, 8)
+range(0, 8)
+range(0, 5)
+[0, 1, 2, 3, 4, 5, 6, 7]
+[1, 2, 3, 4, 5, 6, 7]
+"""
+# List index starts from 0 
+# Range starts from 0 - so if you want a 1-7 list you need range(1,8)
+
 
 #################################################################################
 
