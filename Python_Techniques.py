@@ -39,6 +39,7 @@ Bookmark
 30) end parameter in print
 31) How to make a list of keys from a dictionary
 32) Arguments in functions (Positional,Default, Variable length etc)
+33) Difference between list() and split() (str --> list) & list --> str with join
 '''
 
 
@@ -682,4 +683,24 @@ sum(5, six = 6)
 """
 >>> 5
 six 6 
+"""
+
+"-------------------------------------------------------------"
+#33) Difference between list() and split() (str --> list) & list --> str with join
+
+string = "Peter Jackson"
+
+print(string)
+print(list(string))		#List of str elements (letters)
+print(string.split())	#List of str elements (words)
+
+var = string.split()		
+
+print("".join(var))		#the string again but without space
+
+"""
+>>> Peter Jackson
+['P', 'e', 't', 'e', 'r', ' ', 'J', 'a', 'c', 'k', 's', 'o', 'n']
+['Peter', 'Jackson']
+PeterJackson
 """
