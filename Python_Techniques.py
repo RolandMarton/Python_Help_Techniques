@@ -32,6 +32,7 @@ Bookmark
 29) random randint vs randrange difference & random.choices()
 30) end parameter in print
 31) How to make a list of keys from a dictionary
+32) Arguments in functions (Positional,Default, Variable length etc)
 '''
 
 
@@ -628,4 +629,51 @@ print([fruit['name'] for fruit in fruits if fruit ['name'][0] == 'a'])
 
 """
 >>> ['apple', 'avocado']
+"""
+
+"-------------------------------------------------------------"
+#32 Arguments in functions (Positional,Default, Variable length etc)
+
+# Positional arg
+def sum(a,b):
+    return a,b
+
+sum(5,6)
+
+"""
+>>> 5,6
+"""
+
+# Default arg
+def sum(a = 5, b = 7):
+    return a, b
+
+sum()
+sum(5,6)
+
+"""
+>>> 5 
+7
+>>> 5 
+6
+"""
+
+# Variable length
+def sum(a, *b):
+    return a,b
+
+sum(5,6,7,8)
+"""
+>>> 5
+(6,7,8) # tuple
+"""
+
+def sum(a, **b):
+    return a,b
+
+sum(5, six = 6)
+
+"""
+>>> 5
+six 6 
 """
