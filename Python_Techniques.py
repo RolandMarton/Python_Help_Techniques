@@ -43,6 +43,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 34) List creation problem with range, how range creates for example (0,5) or (1,6)
 35) Creating dict from a sentence, and check how many letters does it have. How many A, how many B etc
 36) Dictionary key sorting
+37) Implement sound/music to your game
 
 #################################################################################
 
@@ -806,7 +807,19 @@ for i in range(len(k) - 1):
             k[j], k[j + 1] = k[j + 1], k[j]
 print(k)
 
+"-------------------------------------------------------------"
+#37) Implement sound/music to your game
 
+from playsound import playsound     #Csak így működik
+import multiprocessing
+import time
+
+
+end_credit_music = multiprocessing.Process(target=playsound, args=("Soundtracks/Music/Rolling_after_credit_music.mp3",))
+
+end_credit_music.start()    #Ez kezdi el
+time.sleep(10)
+end_credit_music.kill()     #Ez öli meg a zenét
 #################################################################################
 
                                 #DATA STRUCTURE CHANGES
