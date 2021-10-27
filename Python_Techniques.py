@@ -41,6 +41,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 32) Arguments in functions (Positional,Default, Variable length etc)
 33) Difference between list() and split() (str --> list) & list --> str with join
 34) List creation problem with range, how range creates for example (0,5) or (1,6)
+35) Creating dict from a sentence, and check how many letters does it have. How many A, how many B etc
 
 #################################################################################
 
@@ -744,6 +745,26 @@ range(0, 5)
 # List index starts from 0 
 # Range starts from 0 - so if you want a 1-7 list you need range(1,8)
 
+"-------------------------------------------------------------"
+#35) Creating dict from a sentence, and check how many letters does it have. How many A, how many B etc
+
+def create_dictionary(word = "The quick brown fox jumps over the lazy dog."):
+    elements = {}
+    index = 0
+    for cha in word.lower():
+        if word[index].isalpha():
+            if cha not in elements.keys():
+                elements[cha] = word.count(cha)		# This makes the 't' : 1 etc
+        index += 1
+    return elements
+
+print(create_dictionary())
+
+"""
+>>> {'t': 1, 'h': 2, 'e': 3, 'q': 1, 'u': 2, 'i': 1, 'c': 1, 'k': 1, 
+'b': 1, 'r': 2, 'o': 4, 'w': 1, 'n': 1, 'f': 1, 'x': 1, 'j': 1, 'm': 1, 'p': 1, 
+'s': 1, 'v': 1, 'l': 1, 'a': 1, 'z': 1, 'y': 1, 'd': 1, 'g': 1}
+"""
 
 #################################################################################
 

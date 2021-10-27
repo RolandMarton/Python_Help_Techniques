@@ -46,6 +46,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 32) Arguments in functions (Positional,Default, Variable length etc)
 33) Difference between list() and split() (str --> list) & list --> str with join
 34) List creation problem with range, how range creates for example (0,5) or (1,6)
+35) Creating dict from a sentence, and check how many letters does it have. How many A, how many B etc
 
 #################################################################################
 
