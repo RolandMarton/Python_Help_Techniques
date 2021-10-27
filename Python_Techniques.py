@@ -1,4 +1,10 @@
-                                             # NE FUTTASD LE A FILE-T MERT NEM FOG MŰKÖDNI !
+        # DONT' RUN THE FILE, BECAUSE IT WILL GIVE YOU AN ERROR
+        # Or if you correct it, you will need a powerplant to run this file
+
+"""
+OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON 
+"""
+
 '''
 Bookmark
 1) Shutil funkció - Ha középre igazítani akarsz dolgokat akkor lehet ezt csinálni
