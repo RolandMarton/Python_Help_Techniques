@@ -504,6 +504,23 @@ do_you_rethrow_question = dedent(f'''
                 Do you want to throw the dice again? [stressful music in the background])
                 ''')
 
+print("\n")
+                
+do_you_rethrow_question2 = (f'''Your safe score is {score1}
+Your score in this round is {score2}
+Do you want to throw the dice again? [stressful music in the background])''')
+                
+                
+print(do_you_rethrow_question)
+print(do_you_rethrow_question2)
+
+"""
+>>> 
+Your safe score is 5
+Your score in this round is 10
+Do you want to throw the dice again? [stressful music in the background])
+"""
+
 "------------------------------------------------------------"
 #24) Table print (for ERP for example)
 def print_table(table):
