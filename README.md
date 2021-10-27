@@ -50,6 +50,9 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 36) Dictionary key sorting
 37) Implement sound/music to your game
 38) Implement sound/music to your game - with pygame - mixer (You can pause the music, resume, volume etc)
+39) Change a letter in a string - 2 ways
+40) Difference between sort() and sorted()
+41) Bubblesort algorithm
 
 #################################################################################
 

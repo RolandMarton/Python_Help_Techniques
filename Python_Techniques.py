@@ -47,6 +47,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 38) Implement sound/music to your game - with pygame - mixer (You can pause the music, resume, volume etc)
 39) Change a letter in a string - 2 ways
 40) Difference between sort() and sorted()
+41) Bubblesort algorithm
 
 #################################################################################
 
@@ -952,6 +953,33 @@ print(a)
 """
 >>> [1, 2, 3]
 """
+
+"-------------------------------------------------------------"
+#41) Bubblesort algorithm
+
+def bubble_sort():
+    numbers = [1, 2, 56, 32, 51, 2, 8, 92, 15]
+    print(numbers)
+    length = len(numbers)
+
+    for check in range(length-1, 0, -1):
+        for index in range(check):
+            if numbers[index] > numbers[index + 1]:
+            	numbers[index], numbers[index + 1] = numbers[index + 1], numbers[index]
+                
+    print(numbers)
+    return numbers
+            
+            
+bubble_sort()
+                
+"""
+>>> 
+[1, 2, 56, 32, 51, 2, 8, 92, 15]
+[1, 2, 2, 8, 15, 32, 51, 56, 92]
+"""
+                
+
 
                                 #DATA STRUCTURE CHANGES
 
