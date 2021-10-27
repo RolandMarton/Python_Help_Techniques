@@ -46,6 +46,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 37) Implement sound/music to your game - with playsound
 38) Implement sound/music to your game - with pygame - mixer (You can pause the music, resume, volume etc)
 39) Change a letter in a string - 2 ways
+40) Difference between sort() and sorted()
 
 #################################################################################
 
@@ -861,8 +862,7 @@ while True:
         mixer.music.stop()
         break
         
-#################################################################################
-
+"-------------------------------------------------------------"
 #39) Change a letter in a string - 2 ways
 
 old_string = "aba"
@@ -888,6 +888,70 @@ print(a_string)
 >>> bbb
 """
 
+"-------------------------------------------------------------"
+#40) Difference between sort() and sorted()
+
+# You can't make a variable with sort()
+# You can use sort() ONLY on lists, containing int or str. YOU CAN'T USE BOTH
+
+#               !!! list.sort(reverse=True|False, key=myFunc) !!!
+
+arr = [56, 98, 1, 4, 10, 67, 5, 6, 100, 167]
+arr.sort()
+print(arr)
+"""
+>>> [1, 4, 5, 6, 10, 56, 67, 98, 100, 167]
+
+if you save it in a variable it gives you None
+"""
+
+arr = ["56", "98", "1", "4", "10", "67", "5", "6", "100", "167"]
+arr.sort()
+print(arr)
+
+"""
+>>> ['1', '10', '100', '167', '4', '5', '56', '6', '67', '98']
+"""
+
+# A function that returns the 'year' value:
+def myFunc(e):
+  return e['year']
+
+cars = [
+  {'car': 'Ford', 'year': 2005},
+  {'car': 'Mitsubishi', 'year': 2000},
+  {'car': 'BMW', 'year': 2019},
+  {'car': 'VW', 'year': 2011}
+]
+
+cars.sort(key=myFunc)
+
+"""
+>>> [{'car': 'Mitsubishi', 'year': 2000}, {'car': 'Ford', 'year': 2005}, {'car': 'VW', 'year': 2011}, {'car': 'BMW', 'year': 2019}]
+"""
+
+############################################## 
+
+# You can't use sorted() on lists, but you can use on every other things
+# You can use it on TUPLES, STR, INT
+
+#                      sorted(iterable, key=key, reverse=reverse)
+
+a = ("b", "g", "a", "d", "f", "c", "h", "e")
+x = sorted(a)
+print(x)
+
+"""
+>>> ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+"""
+
+tuple_of_integers = (3,1,2)
+a = sorted(tuple_of_integers)
+print(a)
+
+"""
+>>> [1, 2, 3]
+"""
 
                                 #DATA STRUCTURE CHANGES
 
