@@ -808,10 +808,17 @@ print(fruit_number)
 """
 
 grocery_list = {}
-for index in range(len(fruit_number)):
+for index in range(len(fruit_number)):      # It doesn't matter you need only the length
     grocery_list[fruit_number[index]] = list_of_fruits[index]
 print(grocery_list)
 
 """
 >>> {1: 'apple', 2: 'banana', 3: 'peach', 4: 'watermelon', 5: 'lemon'}
+"""
+
+"""
+If the fruit_number is [1,2,3,4] but the list_of fruits has 5 elements it will give you a 4 key pair dict
+{1: 'apple', 2: 'banana', 3: 'peach', 4: 'watermelon', 5}
+
+You have to use len, because range needs az integer, you can't use list and it can't be out of index
 """
