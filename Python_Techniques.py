@@ -6,7 +6,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 """
 
 '''
-Bookmark
+##################################### BOOKMARK ###################################
 1) Shutil funkció - Ha középre igazítani akarsz dolgokat akkor lehet ezt csinálni
 2) Window kompatibilis terminál törlés 
 3) Weblink importálása
@@ -40,6 +40,17 @@ Bookmark
 31) How to make a list of keys from a dictionary
 32) Arguments in functions (Positional,Default, Variable length etc)
 33) Difference between list() and split() (str --> list) & list --> str with join
+
+#################################################################################
+
+                                DATA STRUCTURE CHANGES
+1) str --> list
+2) list --> str
+3) integer --> list_of_integer
+4) list_of_integer --> integer
+5) list_of_str --> list_of_int
+6) list_of_int --> list_of_str
+7) From 2 lists to dictionary
 '''
 
 
@@ -703,4 +714,104 @@ print("".join(var))		#the string again but without space
 ['P', 'e', 't', 'e', 'r', ' ', 'J', 'a', 'c', 'k', 's', 'o', 'n']
 ['Peter', 'Jackson']
 PeterJackson
+"""
+
+#################################################################################
+
+                                #DATA STRUCTURE CHANGES
+
+#1) str --> list
+
+string_var = "sajt"
+var = string_var.split()        #If you use list() you will get ["s","a","j","t"]
+print(var)
+"""
+>>> ["sajt"]
+"""
+
+"-------------------------------------------------------------"
+#2) list --> str
+
+string_var = "sajt"
+var  = string_var.split()
+print("".join(var))
+"""
+>>> sajt
+"""
+
+"-------------------------------------------------------------"
+#3) integer --> list_of_integer
+
+list_of_strings = list(str(123))
+print(list_of_strings)
+"""
+>>> ['1','2','3']
+"""
+
+"-------------------------------------------------------------"
+#4) list_of_integer --> integer
+
+list_of_strings = list(str(123)) # or you have a str_list = ['1','2','3']
+int_var = int("".join(list_of_strings))
+"""
+>>> 123
+"""
+
+"-------------------------------------------------------------"
+#5) list_of_str --> list_of_int
+
+list_of_string = ['1','2','3']
+print(list(map(int, list_of_string)))   
+# map() collects the elements, object type, so you need list()
+
+"""
+>>> [1,2,3]
+"""
+
+empty_list = []
+for index in list_of_string:
+    empty_list.append(int(index))
+print(empty_list)
+
+"""
+>>> [1,2,3]
+"""
+"-------------------------------------------------------------"
+#6) list_of_int --> list_of_str
+
+list_of_int = [1,2,3]
+print(list(map(str,list_of_int)))
+"""
+>>> ['1','2','3']
+"""
+
+empty_list = []
+for index in list_of_int:
+    empty_list.append(str(index))
+print(empty_list)
+"""
+>>> ['1','2','3']
+"""
+"-------------------------------------------------------------"
+#7) From 2 lists to dictionary
+
+list_of_fruits = ["apple", "banana", "peach", "watermelon", "lemon"]
+fruit_number = [1,2,3,4,5]
+
+"""
+or you can generate a list 1-5 with this 
+
+fruit_number = []
+for number in range(1,6):        # range() won't show the 6th 
+    fruit_number.append(number)
+print(fruit_number)
+"""
+
+grocery_list = {}
+for index in range(len(fruit_number)):
+    grocery_list[fruit_number[index]] = list_of_fruits[index]
+print(grocery_list)
+
+"""
+>>> {1: 'apple', 2: 'banana', 3: 'peach', 4: 'watermelon', 5: 'lemon'}
 """

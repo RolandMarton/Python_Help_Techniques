@@ -6,7 +6,12 @@ This is a repository for those who need help with Python. I collected some usefu
 
 Updates in the future: Categorized tips, Translation into English, Adding New Ones
 
-Bookmark
+"""
+OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON 
+"""
+
+'''
+##################################### BOOKMARK ###################################
 1) Shutil funkció - Ha középre igazítani akarsz dolgokat akkor lehet ezt csinálni
 2) Window kompatibilis terminál törlés 
 3) Weblink importálása
@@ -38,3 +43,16 @@ Bookmark
 29) random randint vs randrange difference & random.choices()
 30) end parameter in print
 31) How to make a list of keys from a dictionary
+32) Arguments in functions (Positional,Default, Variable length etc)
+33) Difference between list() and split() (str --> list) & list --> str with join
+
+#################################################################################
+
+                                DATA STRUCTURE CHANGES
+1) str --> list
+2) list --> str
+3) integer --> list_of_integer
+4) list_of_integer --> integer
+5) list_of_str --> list_of_int
+6) list_of_int --> list_of_str
+7) From 2 lists to dictionary
