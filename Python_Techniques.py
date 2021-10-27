@@ -42,6 +42,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 33) Difference between list() and split() (str --> list) & list --> str with join
 34) List creation problem with range, how range creates for example (0,5) or (1,6)
 35) Creating dict from a sentence, and check how many letters does it have. How many A, how many B etc
+36) Dictionary key sorting
 
 #################################################################################
 
@@ -765,6 +766,29 @@ print(create_dictionary())
 'b': 1, 'r': 2, 'o': 4, 'w': 1, 'n': 1, 'f': 1, 'x': 1, 'j': 1, 'm': 1, 'p': 1, 
 's': 1, 'v': 1, 'l': 1, 'a': 1, 'z': 1, 'y': 1, 'd': 1, 'g': 1}
 """
+
+"-------------------------------------------------------------"
+#36) Dictionary key sorting
+
+dictionary = {'t': 1, 'h': 2, 'e': 3, 'q': 1, 'u': 2, 'i': 1, 'c': 1, 'k': 1, 'b': 1, 'r': 2, 'o': 4, 'w': 1, 'n': 1, 'f': 1, 'x': 1, 'j': 1, 'm': 1, 'p': 1, 's': 1, 'v': 1, 'l': 1,  'a': 1, 'z': 1, 'y': 1, 'd': 1, 'g': 1}
+
+def sort_keys(elements):
+    keys = list(elements.keys())
+    return sorted(keys)
+
+keys = sort_keys(dictionary)
+
+print(keys)
+
+#///////////////////////////////////////////// ITS THE SAME
+
+k = list(dictionary.keys())
+for i in range(len(k) - 1):
+    for j in range(len(k) - i - 1):
+        if k[j] > k[j + 1]:
+            k[j], k[j + 1] = k[j + 1], k[j]
+print(k)
+
 
 #################################################################################
 
