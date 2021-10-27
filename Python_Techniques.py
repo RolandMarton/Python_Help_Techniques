@@ -884,7 +884,7 @@ a_string = a_string.replace("a", "b")
 #Replace in a_string
 
 print(a_string)
-
+"""
 >>> bbb
 """
 
