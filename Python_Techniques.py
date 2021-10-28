@@ -1063,12 +1063,12 @@ print(final_matrix)
 """
 
 for row in final_matrix:
-    print(*row)
+    print([*row])
 
 """
-. . .
-. . .
-. . .
+[. . .]
+[. . .]
+[. . .]
 
 """
 
