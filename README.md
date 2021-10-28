@@ -1,5 +1,5 @@
 # Python_Help_Techniques
-This is a repository for those who need help with Python. I collected some useful tips &amp;amp; technigues which helped me a lot.
+This is a repository for those who need help with Python. I collected some useful tips & technigues which helped me a lot.
 
 
 !!!ATTENTION!!! These files are in Hungarian! The code is clear so it can be understood by English speakers. But if the people need it in the future I can translate it in English. 
