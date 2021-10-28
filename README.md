@@ -53,6 +53,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 39) Change a letter in a string - 2 ways
 40) Difference between sort() and sorted()
 41) Bubblesort algorithm
+42) How to make dict out of tuples and backward
 
 #################################################################################
 
