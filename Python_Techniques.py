@@ -49,6 +49,7 @@ OWNER - CREATED AND MODIFIED BY ROLAND MÁRTON
 40) Difference between sort() and sorted()
 41) Bubblesort algorithm
 42) How to make dict out of tuples and backward
+43) How to create a matrix
 
 #################################################################################
 
@@ -1027,6 +1028,28 @@ dictionary = {'akash': 10, 'gaurav': 12, 'anand': 14, 'suraj': 20, 'akhil': 25, 
 print(list(dictionary.items()))
 
 #Output: [('akash', 10), ('gaurav', 12), ('anand', 14), ('suraj', 20), ('akhil', 25), ('ashish', 30)]
+
+
+#43) How to create a matrix
+
+column_size = 4
+row_size = 3
+#Declaring an empty 1D array.
+a = []
+#Declaring an empty 1D array.
+b = []
+#Initialize the column.
+for j in range(0, column_size):
+    b.append(j)			# If b.append(0) - [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+#Append the column to each row.
+for i in range(0, row_size):
+    a.append(b)
+#Printing the 2d created array
+print(a)
+
+"""
+>>> [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]
+"""
 
                                 #DATA STRUCTURE CHANGES
 
