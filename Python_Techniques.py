@@ -1051,6 +1051,39 @@ print(a)
 >>> [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]
 """
 
+final_matrix = []
+for _ in range(0,3):
+    matrix = []
+    for _ in range(0,3):
+        matrix.append(".")
+    final_matrix.append(matrix)
+print(final_matrix)
+"""
+>>> [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']]
+"""
+
+for row in final_matrix:
+    print(*row)
+
+"""
+. . .
+. . .
+. . .
+
+"""
+
+matrix = ([["." for _ in range(5)] for _ in range(5)])
+for i in matrix:
+    print(i)
+"""
+['.', '.', '.', '.', '.']
+['.', '.', '.', '.', '.']
+['.', '.', '.', '.', '.']
+['.', '.', '.', '.', '.']
+['.', '.', '.', '.', '.']
+
+"""
+
                                 #DATA STRUCTURE CHANGES
 
 #1) str --> list
